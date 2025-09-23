@@ -26,7 +26,9 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
+\usepackage[T1]{fontenc}
+\renewcommand{\normalsize}{\fontsize{10}{12}\selectfont}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -54,7 +56,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.85, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -63,11 +65,10 @@
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
@@ -79,7 +80,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{12pt}{8pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -102,7 +103,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[4pt]
     \end{tabularx}
     }
     {
@@ -111,10 +112,10 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[4pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
     }
     {
     \end{itemize}
@@ -142,7 +143,7 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Anton May} \\[7.5pt]
+\Huge{Anton May} \\[8pt]
 \href{https://github.com/ehtbanton}{\raisebox{-0.05\height}\faGithub\ ehtbanton} \ $|$ \
 \href{https://www.linkedin.com/in/antonpmay}{\raisebox{-0.05\height}\faLinkedin\ antonpmay} \ $|$ \
 % \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \
@@ -150,51 +151,63 @@
 \href{tel:+447849262611}{\raisebox{-0.05\height}\faMobile \ +44 7849 262611} \\
 \end{tabularx}
 
+\vspace{8pt}
+
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-Software engineer with experience developing 3D medical imaging tools, RAG-based AI systems, and web applications. Strong technical background in ML, signal processing, and full-stack development (Next.js, Three.js, Python, C++). Proven ability to work on small teams, having recently completed internships at AIDA-3D and Valor Carbon where I built production tools and gained expertise in cloud hosting and agentic AI systems.
 
 %Experience
 \section{Work Experience}
 
-\begin{joblong}{Software Development Intern - AIDA-3D}{Jun 2025 - Sep 2025}
-\item Developed an interactive 3D viewer and annotation tool for multi-layer medical images to align with the OME-Zarr v0.5 specification
-\item Gained skills in web development with Next.js, Three.js and building my own marching cubes algorithm
-\item Interpreted complex and poorly documented data pipelines, and was introduced to Rust
-\end{joblong}
-
 \begin{joblong}{Software Engineer Intern - Valor Carbon}{Aug 2025 - Sep 2025}
-\item Designed and created a tool to automatically fill in project design documents using RAG systems for LLMs
-\item Gained experience with web hosting via Oracle Cloud and making a secure app which handles multiple users' data
-\item Built agentic AI systems and reflected on how to actually make a useful tool rather than forcing automation where unnecessary
+\item Designed automated document generation tool using RAG-enhanced LLMs for project specifications
+\item Implemented secure multi-user application with Oracle Cloud hosting
+\item Developed agentic AI systems with focus on practical automation over forced implementation
 \end{joblong}
 
-\begin{joblong}{LLM Performance Evaluator - Outlier}{2024 - present}
-\item Analysing the outputs of LLMs in response to technical prompts, for correctness, relevance, and clarity
-\item Suggesting improvements and corrections to outputs in software (C++) and mathematics domains
+\vspace{6pt}
+
+\begin{joblong}{Software Development Intern - AIDA-3D}{Jun 2025 - present}
+\item Developed interactive 3D medical image viewer with annotation tools for OME-Zarr v0.5 specification
+\item Built custom marching cubes algorithm and created a robust 3D viewer from scratch in three.js
+\item Reverse-engineered complex, poorly documented data pipelines and created a useful, usable tool
 \end{joblong}
 
-  
+\vspace{6pt}
+
+\begin{joblong}{LLM Performance Evaluator - Outlier}{Dec 2024 - Apr 2025}
+\item Evaluate LLM outputs for accuracy, relevance, and clarity across software and mathematics domains
+\item Provide detailed feedback and corrections for C++ programming and mathematical reasoning tasks
+\end{joblong}
+
+\vspace{6pt}
+
+\begin{joblong}{Academical Clerk - New College, Oxford}{Oct 2022 - present}
+\item Performing daily alongside my studies as a professional singer in a globally renowned choir
+\end{joblong}
+
 %Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Analysing radiology reports using large language models} & \hfill Sep 2025 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{4th year solo engineering project focusing on specialised local LLMs in agentic fact-checking and info-filling systems to sort reports and flag inaccuracies. Combines ML with healthcare applications for automated quality assurance in medical reporting.}  \\
+\textbf{Analysing radiology reports using large language models} & \hfill Sep 2025 - present \\[4pt]
+\multicolumn{2}{@{}X@{}}{Solo engineering project developing specialized LLMs for automated medical report validation and information extraction, combining machine learning with healthcare quality assurance systems.}  \\
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Intelligent Musical Lighting System - Project Leader} & \hfill Oct 2024 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Leading a team of 4 to explore solutions for fully automating live concert lighting through a real-time AI interpreter that tracks musical features to determine mood and section changes.}  \\
-\end{tabularx}
+\vspace{6pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Samsung Solve For Tomorrow - Finalist} & \hfill Jan - Jul 2022 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Team of 4 designing smart glasses for people with hearing impairment, involving IoT, AI speech recognition, and ergonomics. Made final 5 teams, pitching design and business plan to 5 Samsung UK executives.}  \\
+\textbf{Intelligent Musical Lighting System - Project Leader} & \hfill Oct 2024 - May 2025 \\[4pt]
+\multicolumn{2}{@{}X@{}}{Leading 4-person team developing real-time AI system for automated concert lighting based on musical feature analysis and mood detection.}  \\
+\end{tabularx}
+
+\vspace{6pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Samsung Solve For Tomorrow - Finalist} & \hfill Jan 2022 - Jul 2022 \\[4pt]
+\multicolumn{2}{@{}X@{}}{Designed IoT-enabled smart glasses with AI speech recognition for hearing-impaired users. Advanced to final 5 teams, presenting to Samsung UK executives.}  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -203,19 +216,9 @@ Software engineer with experience developing 3D medical imaging tools, RAG-based
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 2022 - 2026 & \textbf{MEng Engineering Science (4th year), New College, University of Oxford} \hfill \normalsize (Predicted 2:1) \\
-& 83\% in Engineering Computation (highest marks in year), modules include Machine Learning, Software Engineering, Control Systems \\[8pt]
-
-2015 - 2022 & \textbf{Wilson's School, Sutton} \hfill A* in Further Maths, Maths, Physics, and Music \\
+& 83\% in Engineering Computation (highest marks in year) \\
+& Relevant modules: Machine Learning, Software Engineering, Control Systems \\[4pt]
 \end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
