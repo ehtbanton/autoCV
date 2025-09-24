@@ -50,7 +50,11 @@
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
+
+% Custom commands for email and phone links
+\newcommand{\emaillink}[1]{\href{mailto:#1}{#1}}
+\newcommand{\phonelink}[2]{\href{tel:#1}{#2}} 	
 
 %other packages for formatting
 \RequirePackage{color}
@@ -88,7 +92,15 @@
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\hypersetup{
+    colorlinks=true,
+    breaklinks=true,
+    urlcolor=linkcolour,
+    linkcolor=linkcolour,
+    pdfborder={0 0 0},
+    pdfcreator={pdflatex},
+    pdfproducer={pdflatex}
+}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
@@ -147,8 +159,8 @@
 \href{https://github.com/ehtbanton}{\raisebox{-0.05\height}\faGithub\ ehtbanton} \ $|$ \
 \href{https://www.linkedin.com/in/antonpmay}{\raisebox{-0.05\height}\faLinkedin\ antonpmay} \ $|$ \
 % \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \
-\href{mailto:anton.may@new.ox.ac.uk}{\raisebox{-0.05\height}\faEnvelope \ anton.may@new.ox.ac.uk} \ $|$ \
-\href{tel:+447849262611}{\raisebox{-0.05\height}\faMobile \ +44 7849 262611} \\
+\raisebox{-0.05\height}\faEnvelope \ anton.may@new.ox.ac.uk \ $|$ \
+\raisebox{-0.05\height}\faMobile \ +447849262611 \\
 \end{tabularx}
 
 \vspace{20pt}
