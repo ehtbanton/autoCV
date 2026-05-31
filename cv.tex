@@ -38,7 +38,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.85, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[scale=0.85, top=1.3cm, bottom=1.3cm, left=2cm, right=2cm]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -62,7 +62,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{5pt}{3pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -157,10 +157,16 @@
 %Experience
 \section{Work Experience}
 
+\begin{joblong}{Chief Technology Officer - Cantic Ltd}{May 2026 - present}
+\item Leading engineering for \textbf{PocketBot AI}, a proactive agentic to-do list that monitors a user's channels and automatically drafts ready-to-go solutions for their daily tasks
+\item Pairing clear, trackable task presentation with a strict approval-before-execution model to deliver the speed of an AI assistant with far greater reliability and control than comparable agents
+\item Secured the company's first venture backing of \$200{,}000 at a \$3M post-money valuation
+\end{joblong}
+\vspace{2pt}
 \begin{joblong}{Software Engineer - Big Data Institute, Oxford}{Jun 2025 - Oct 2025}
 \item Revamped \href{http://141.147.64.20:3000/zarr}{\textbf{AIDA-3D}}, a 3D medical image viewer, from a 3-year-old untouched demo into a useful tool for arbitrary web-hosted data aligned with the OME-Zarr v0.5 spec
-\item Reverse-engineered undocumented data pipelines with no external guidance
-\item The project group are seeking £2M grant funding, with reference to how the work I'm doing in my 4th year project could be integrated into AIDA-3D to make it a text-searchable 3D image database.
+\item Reverse-engineered undocumented data pipelines with no external guidance to make the system maintainable
+\item The project group secured £2M in grant funding in March 2026, supported by the voluntary contributions I continued to make to the viewer after my internship had ended
 \end{joblong}
 \vspace{2pt}
 \begin{joblong}{Software Development Intern - Valor Carbon}{Aug 2025 - Sep 2025}
@@ -180,13 +186,8 @@
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{(4YP) Analysing radiology reports using large language models} & \hfill Oct 2025 - present \\[2pt]
-\multicolumn{2}{@{}X@{}}{My final year project. Building a tool to automatically label radiology reports using a fine-tuned local LLM, unlocking a huge untapped resource of training data for medical imaging models. Designing a checking system to filter errored labels and benchmarking against state-of-the-art approaches.}  \\
-\end{tabularx}
-\vspace{2pt}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{ThirdEye - Navigation for the Visually Impaired} & \hfill Nov 2025 - present \\[2pt]
-\multicolumn{2}{@{}X@{}}{A discreet IoT wearable (baseball cap) which connects to a mobile companion app to create stereoscopic depth maps, perform YOLO object recognition, and call GPT-4-mini to build a rich understanding of the user's environment. We've just finished our second prototype and submitted to Microsoft Imagine Cup.}  \\
+\multicolumn{2}{@{}X@{}}{A discreet IoT wearable (baseball cap) with an integrated stereo camera that connects to a mobile companion app to create stereoscopic depth maps, perform YOLO object recognition, and call GPT-4-mini to build a rich understanding of the user's environment. Selected as a Scholar at HackEurope 2026, Europe's largest student hackathon, to extend the project, and won £500 at a Cambridge AI founders demo day hosted by Oxbridge~AI~X. The wearable has also been submitted to the Microsoft Imagine Cup.}  \\
 \end{tabularx}
 \vspace{2pt}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
@@ -196,26 +197,25 @@
 \vspace{2pt}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Quantext - Quantum Dice Competition Winner} & \hfill Nov 2025 \\[2pt]
-\multicolumn{2}{@{}X@{}}{A QUBO-based RAG algorithm addressing a known flaw in LLM context retrieval on massive, cluttered datasets. Built for Quantum Dice's ORBIT quantum compute platform. Won £1000; only undergrads in top 3.}  \\
+\multicolumn{2}{@{}X@{}}{A QUBO-based RAG algorithm addressing a known flaw in LLM context retrieval on massive, cluttered datasets, built for Quantum Dice's ORBIT quantum compute platform. Won £1000 as the only undergraduate team to finish in the top three.}  \\
 \end{tabularx}
 \vspace{2pt}
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Intelligent Musical Lighting System - Project Leader} & \hfill Oct 2024 - May 2025 \\[2pt]
-\multicolumn{2}{@{}X@{}}{Led a 4-person team building an AI system for automated concert lighting based on musical feature analysis.}  \\
+\textbf{(4YP) Analysing radiology reports using large language models} & \hfill Oct 2025 - present \\[2pt]
+\multicolumn{2}{@{}X@{}}{My final year project. Building a tool to automatically label radiology reports using a fine-tuned local LLM, unlocking a huge untapped resource of training data for medical imaging models. Designing a checking system to filter errored labels and benchmarking against state-of-the-art approaches.}  \\
 \end{tabularx}
 
-\vspace{6pt}
+\vspace{2pt}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
 
-\begin{joblong}{MEng Engineering Science, University of Oxford (predicted 2:1)}{Oct 2022 - Jul 2026}
-\item 83\% in Engineering Computation (3rd highest in year) - programming project creating a tool to detect the tempo of a piece of music, and comparing its performance to an equivalent LLM-written tool.
-\end{joblong}
+\begin{jobshort}{MEng Engineering Science, University of Oxford (predicted 2:1)}{Oct 2022 - Jul 2026}
+\end{jobshort}
 
-\vspace{6pt}
+\vspace{2pt}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
